@@ -16,7 +16,7 @@
     - Return **top 10** tweets of authenticated user.
     - Paginate results by providing `page` request parameter.
     - Response must have the following structure:
-      ```
+      ```json
       {
           "tweets": [
             {
@@ -50,13 +50,14 @@
           "meta": {
             "page": 1
           }
-      }```
+      }
+      ```
   2. **GET** `/mytwitterapi/timeline/<screen_name>?page=1`
     - Return **top 10** tweets of the provided `screen_name`.
     - Paginate results by providing `page` request parameter.
     - Response must have the following structure:
 
-      ```
+      ```json
       {
           "tweets": [
             {
@@ -90,13 +91,14 @@
           "meta": {
             "page": 1
           }
-      }```
+      }
+      ```
   3. **GET** `/mytwitterapi/mentions/<screen_name>?page=1`
     - Return **top 10** tweets mentioning `screen_name`.
     - Paginate results by providing `page` request parameter.
     - Response must have the following structure:
 
-      ```
+      ```json
       {
           "tweets": [
             {
@@ -130,17 +132,19 @@
           "meta": {
             "page": 1
           }
-      }```
+      }
+      ```
   4. **POST** `/mytwitterapi/new`
     - Publish a new tweet using the following request body:
 
-      ```
+      ```json
       {
-          text:  "This is my new tweet @twitterbot #APIAreFun"
-      }```
+          "text":  "This is my new tweet @twitterbot #APIAreFun"
+      }
+      ```
     - Return newly created tweet. It must have the following structure:
 
-      ```
+      ```json
       {
           "id": 12345456566,
           "text": "This is my new tweet @twitterbot #APIAreFun",
@@ -163,7 +167,8 @@
       }```
     - Make sure new tweets do not exceed 140 characters. Respond with an 400 error otherwise:
 
-      ```
+      ```json
       {
           "error": "Tweets must not exceed 140 characters"
-      }```
+      }
+      ```
