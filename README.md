@@ -94,7 +94,7 @@ Implement the following endpoints and their requirements:
         "page": 1
       }
   }
-    ```
+  ```
 3. **GET** `/mytwitterapi/mentions/<screen_name>?page=1`
   - Return **top 10** tweets mentioning `screen_name`.
   - Paginate results by providing `page` request parameter.
@@ -135,7 +135,7 @@ Implement the following endpoints and their requirements:
         "page": 1
       }
   }
-    ```
+  ```
 4. **POST** `/mytwitterapi/new`
   - Publish a new tweet using the following request body:
 
@@ -166,11 +166,12 @@ Implement the following endpoints and their requirements:
           "id": "850007368138018816"
         }
       ]
-  }```
+  }
+  ```
   - Make sure new tweets do not exceed 140 characters. Respond with an 400 error otherwise:
 
   ```json
   {
       "error": "Tweets must not exceed 140 characters"
   }
-    ```
+  ```
