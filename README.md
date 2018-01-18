@@ -9,7 +9,6 @@ Implement an API in Javascript using Express API framework and NodeJs that fetch
 4.  Twitter Account
 
 
-
 ### Tasks:
 
 Implement the following endpoints and their requirements:
