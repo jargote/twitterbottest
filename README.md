@@ -175,3 +175,4 @@ Implement the following endpoints and their requirements:
       "error": "Tweets must not exceed 140 characters"
   }
   ```
+5. Implement unittests or behavioural tests for all endpoint
